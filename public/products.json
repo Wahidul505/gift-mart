@@ -1,0 +1,74 @@
+[
+    {
+      "id": "623dded8d78d9211fbd3b246",
+      "image": "https://img.freepik.com/free-photo/cute-brown-teddy-bear-colored-knitted-scarf-sitting-white-background_116441-7370.jpg?w=740",
+      "price": 595,
+      "name": "Cute Teddy Bear Doll"
+    },
+    {
+      "id": "623dded85bf3b7844d3992ea",
+      "image": "https://img.freepik.com/free-photo/beautiful-succulent-pot_197602-1.jpg?w=740",
+      "price": 223,
+      "name": "Leafy Plant"
+    },
+    {
+      "id": "623dded8b9a0b3a0db5be148",
+      "image": "https://m.media-amazon.com/images/I/41zq8jCSYJL.jpg",
+      "price": 99,
+      "name": "Programming er Bolodh to Boss- Jhankar Mahbub"
+    },
+    {
+      "id": "623dded854edd14248fbfd2c",
+      "image": "https://img.freepik.com/free-vector/happy-birthday-with-frame-balloons_1361-3244.jpg?t=st=1648222981~exp=1648223581~hmac=3efa03f9e06abb8e754167bcdbedd74aae55ec0d2dfee4a3b694b97c43caae23&w=740",
+      "price": 299,
+      "name": "100 piece of Birthday Balloons"
+    },
+    {
+      "id": "623dded85fe30fc809d890ee",
+      "image": "https://img.freepik.com/free-photo/wireless-white-mac-apple-keyboard-mouse_224798-1646.jpg?w=826",
+      "price": 9990,
+      "name": "Apple Magic Keyboard"
+    },
+    {
+      "id": "623dded8f46bbf57d08bd9ea",
+      "image": "https://img.freepik.com/free-psd/ceramic-small-bowls-mockup-back-view_1332-9772.jpg?t=st=1648223195~exp=1648223795~hmac=1b54b667d2ac7a90d9722919a15e261dde39fb4026a122752c4d2e2709f7cd77&w=740",
+      "price": 789,
+      "name": "Ceramic Small Bowls Mockup"
+    },
+    {
+      "id": "623dded86437ebe38af6676f",
+      "image": "https://img.freepik.com/free-psd/ceramic-small-bowls-mockup-back-view_1332-9772.jpg?t=st=1648223195~exp=1648223795~hmac=1b54b667d2ac7a90d9722919a15e261dde39fb4026a122752c4d2e2709f7cd77&w=740",
+      "price": 850,
+      "name": "Ceramic Coffee Mugs Pair"
+    },
+    {
+      "id": "623dded8420bfbc8510fedb3",
+      "image": "https://img.freepik.com/free-photo/beautiful-elegance-luxury-fashion-green-handbag_1203-7655.jpg?t=st=1648223394~exp=1648223994~hmac=c4a4070276b98f1cc85f63ee3aa1695f0affddebcff6eeee9b352350d681f0ae&w=360",
+      "price": 676,
+      "name": "Elegant Leather Purse"
+    },
+    {
+      "id": "623dded8583c43d0bf8d08ba",
+      "image": "https://www.gizmochina.com/wp-content/uploads/2018/09/Apple-iPhone-Xs-600x600.jpg",
+      "price": 112000,
+      "name": "Iphone XS Light Pink Variant"
+    },
+    {
+      "id": "623dded8621ead1c934f3a46",
+      "image": "https://poppin.imgix.net/products/2019/poppin_blush_3_subject_pocket_spiral_notebook_01.jpg",
+      "price": 99,
+      "name": "Matador Notebook"
+    },
+    {
+      "id": "623dded81a0d8a60f3f33e7b",
+      "image": "https://www.coxandcox.co.uk/media/catalog/product/cache/eceb26e77de98330381661bbe755c5ac/s/s/ss19-h-blshdesk-on_2.png",
+      "price": 3682,
+      "name": "Premium Desk Lamp"
+    },
+    {
+      "id": "623dded82452cbe638e72ccd",
+      "image": "https://m.media-amazon.com/images/I/61el5-iHmAL.jpg",
+      "price": 4572,
+      "name": "Soft Pastel Color Set"
+    }
+  ]
