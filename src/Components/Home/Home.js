@@ -9,6 +9,7 @@ const Home = () => {
     const [cart, setCart] = useState([]);
     const [generatedItem, setGeneratedItem] = useState({});
     const [display, setDisplay] = useState('none');
+    const [show, setShow] = useState('none');
     useEffect(()=>{
         fetch('products.json')
         .then(res => res.json())
@@ -36,6 +37,7 @@ const Home = () => {
             else{
                 return generateCartItem();
             }
+            setShow('flex');
         }
     }
     const deleteItem = (product) =>{
@@ -45,6 +47,7 @@ const Home = () => {
     const resetCart = () =>{
         const emptyCart = [];
         setCart(emptyCart);
+        setShow('none');
     }
     const closeModal = () =>{
         setDisplay('none');
@@ -67,6 +70,7 @@ const Home = () => {
                     generatedItem={generatedItem}
                     resetCart={resetCart}
                     deleteItem={deleteItem}
+                    show={show}
                     ></Cart>
                 </div>
             </div>
