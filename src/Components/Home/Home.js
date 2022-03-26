@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './Home.css';
 import Product from '../Product/Product';
 import Cart from '../Cart/Cart';
+import Modal from '../Modal/Modal';
 
 const Home = () => {
     const [products, setProducts] = useState([]);
@@ -50,10 +51,8 @@ const Home = () => {
     }
     return (
         <div>
-            <div style={{display:display}} className='modal'>
-                <h1>Oops!</h1>
-                <h3>You Can not Add more than 4 Gift Item</h3>
-                <button onClick={closeModal}>OK</button>
+            <div>
+                <Modal display={display} closeModal={closeModal}></Modal>
             </div>
             <div className='home-container'>
                 <div className="products-container">
