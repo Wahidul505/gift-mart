@@ -1,12 +1,14 @@
 import React from 'react';
 import CartItem from '../CartItem/CartItem';
 
-const Cart = () => {
+const Cart = ({cart}) => {
     return (
         <div>
             <h3>Your Orders</h3>
             <hr />
-            <CartItem></CartItem>
+            {
+                cart.map(product => <CartItem key={product.id} product={product}></CartItem>)
+            }
             <hr />
         </div>
     );

@@ -1,9 +1,9 @@
 import React from 'react';
-import './Gift.css';
+import './Product.css';
 import { BsGiftFill } from 'react-icons/bs';
 
-const Gift = ({gift}) => {
-    const {image, name, price} = gift;
+const Product = ({product, addToCart}) => {
+    const {image, name, price} = product;
     return (
         <div className='gift-card'>
             <div>
@@ -12,10 +12,10 @@ const Gift = ({gift}) => {
                 <p>Tk {price}</p>
             </div>
             <p className='add-btn'>
-                <button>Add To Cart <span style={{paddingLeft:'5px', fontSize:'15px'}}><BsGiftFill></BsGiftFill></span></button>
+                <button onClick={()=>addToCart(product)}>Add To Cart <span style={{paddingLeft:'5px', fontSize:'15px'}}><BsGiftFill></BsGiftFill></span></button>
             </p>
         </div>
     );
 };
 
-export default Gift;
+export default Product;
