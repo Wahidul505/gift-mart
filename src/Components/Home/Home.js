@@ -7,16 +7,22 @@ const Home = () => {
     const [products, setProducts] = useState([]);
     const [cart, setCart] = useState([]);
     const [generatedItem, setGeneratedItem] = useState({});
+    const [display, setDisplay] = useState('none');
     useEffect(()=>{
         fetch('products.json')
         .then(res => res.json())
         .then(data => setProducts(data))
     },[])
     const addToCart = (product) =>{
-        const exist = cart.find(element => element.id === product.id);
-        if(!exist){
-            const newCart = [...cart, product];
-            setCart(newCart);
+        if(cart.length < 4){
+            const exist = cart.find(element => element.id === product.id);
+            if(!exist){
+                const newCart = [...cart, product];
+                setCart(newCart);
+            }
+        }
+        else{
+            setDisplay('block');
         }
     }
     const generateCartItem = () =>{
@@ -39,21 +45,31 @@ const Home = () => {
         const emptyCart = [];
         setCart(emptyCart);
     }
+    const closeModal = () =>{
+        setDisplay('none');
+    }
     return (
-        <div className='home-container'>
-            <div className="products-container">
-                {
-                    products.map(product => <Product key={product.id} product={product} addToCart={addToCart}></Product>)
-                }
+        <div>
+            <div style={{display:display}} className='modal'>
+                <h1>Oops!</h1>
+                <h3>You Can not Add more than 4 Gift Item</h3>
+                <button onClick={closeModal}>OK</button>
             </div>
-            <div className="cart-container">
-                <Cart 
-                cart={cart}
-                generateCartItem={generateCartItem}
-                generatedItem={generatedItem}
-                resetCart={resetCart}
-                deleteItem={deleteItem}
-                ></Cart>
+            <div className='home-container'>
+                <div className="products-container">
+                    {
+                        products.map(product => <Product key={product.id} product={product} addToCart={addToCart}></Product>)
+                    }
+                </div>
+                <div className="cart-container">
+                    <Cart 
+                    cart={cart}
+                    generateCartItem={generateCartItem}
+                    generatedItem={generatedItem}
+                    resetCart={resetCart}
+                    deleteItem={deleteItem}
+                    ></Cart>
+                </div>
             </div>
         </div>
     );
