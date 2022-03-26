@@ -18,10 +18,15 @@
 }
 @media only screen and (max-width: 688px) {
     .home-container{
-        grid-template-columns: 2fr 1fr;
+        display: flex;
+        flex-direction: column-reverse;
+        row-gap: 20px;
     }
     .products-container{
         grid-template-columns: repeat(1, 1fr);
+    }
+    .cart-container{
+        margin-left: 0;
     }
 }
 @media only screen and  (min-width: 689px) and (max-width: 992px){
