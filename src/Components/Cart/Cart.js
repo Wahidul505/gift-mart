@@ -3,14 +3,14 @@ import CartItem from '../CartItem/CartItem';
 import './Cart.css';
 import { BsArrowRightSquare } from 'react-icons/bs';
 
-const Cart = ({cart, generateCartItem, generatedItem, resetCart}) => {
+const Cart = ({cart, generateCartItem, generatedItem, resetCart, deleteItem}) => {
     const {name, image} = generatedItem;
     return (
         <div>
             <h3>Your Orders</h3>
             <hr />
             {
-                cart.map(product => <CartItem key={product.id} product={product}></CartItem>)
+                cart.map(product => <CartItem key={product.id} product={product} deleteItem={deleteItem}></CartItem>)
             }
             <hr />
             <div className='generated-item'>

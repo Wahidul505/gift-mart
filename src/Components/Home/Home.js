@@ -31,6 +31,10 @@ const Home = () => {
             }
         }
     }
+    const deleteItem = (product) =>{
+        const restItem = cart.filter(item => item.id !== product.id);
+        setCart(restItem);
+    }
     const resetCart = () =>{
         const emptyCart = [];
         setCart(emptyCart);
@@ -48,6 +52,7 @@ const Home = () => {
                 generateCartItem={generateCartItem}
                 generatedItem={generatedItem}
                 resetCart={resetCart}
+                deleteItem={deleteItem}
                 ></Cart>
             </div>
         </div>
