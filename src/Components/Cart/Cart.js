@@ -3,7 +3,7 @@ import CartItem from '../CartItem/CartItem';
 import './Cart.css';
 import { BsArrowRightSquare } from 'react-icons/bs';
 
-const Cart = ({cart, generateCartItem, generatedItem}) => {
+const Cart = ({cart, generateCartItem, generatedItem, resetCart}) => {
     const {name, image} = generatedItem;
     return (
         <div>
@@ -20,7 +20,7 @@ const Cart = ({cart, generateCartItem, generatedItem}) => {
             </div>
             <hr />
             <button onClick={generateCartItem} className='choose-btn'>Choose One For Me</button>
-            <button className='reset-btn'>Reset</button>
+            <button onClick={resetCart} className='reset-btn'>Reset</button>
         </div>
     );
 };

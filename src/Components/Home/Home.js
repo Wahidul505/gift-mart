@@ -20,14 +20,20 @@ const Home = () => {
         }
     }
     const generateCartItem = () =>{
-        const index = Math.floor(Math.random() * 10);
-        if(index < cart.length){
-            const item = cart[index];
-            setGeneratedItem(item);
+        if(cart.length > 0){
+            const index = Math.round(Math.random() * 10);
+            if(index < cart.length){
+                const item = cart[index];
+                setGeneratedItem(item);
+            }
+            else{
+                return generateCartItem();
+            }
         }
-        else{
-            return generateCartItem();
-        }
+    }
+    const resetCart = () =>{
+        const emptyCart = [];
+        setCart(emptyCart);
     }
     return (
         <div className='home-container'>
@@ -37,7 +43,12 @@ const Home = () => {
                 }
             </div>
             <div className="cart-container">
-                <Cart cart={cart} generateCartItem={generateCartItem} generatedItem={generatedItem}></Cart>
+                <Cart 
+                cart={cart}
+                generateCartItem={generateCartItem}
+                generatedItem={generatedItem}
+                resetCart={resetCart}
+                ></Cart>
             </div>
         </div>
     );
