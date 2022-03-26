@@ -6,7 +6,7 @@ import { BsArrowRightSquare } from 'react-icons/bs';
 const Cart = ({cart, generateCartItem, generatedItem, resetCart, deleteItem}) => {
     const {name, image} = generatedItem;
     return (
-        <div>
+        <div className='cart'>
             <h3>Your Orders</h3>
             <hr />
             {
