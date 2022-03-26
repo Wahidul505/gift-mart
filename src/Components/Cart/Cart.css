@@ -1,0 +1,15 @@
+.choose-btn, .reset-btn{
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+}
+.choose-btn{
+    background-color: lightseagreen;
+}
+.reset-btn{
+    background-color: gold;
+}
