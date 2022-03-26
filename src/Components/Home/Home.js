@@ -6,6 +6,7 @@ import Cart from '../Cart/Cart';
 const Home = () => {
     const [products, setProducts] = useState([]);
     const [cart, setCart] = useState([]);
+    const [generatedItem, setGeneratedItem] = useState({});
     useEffect(()=>{
         fetch('products.json')
         .then(res => res.json())
@@ -18,7 +19,16 @@ const Home = () => {
             setCart(newCart);
         }
     }
-    console.log(cart);
+    const generateCartItem = () =>{
+        const index = Math.floor(Math.random() * 10);
+        if(index < cart.length){
+            const item = cart[index];
+            setGeneratedItem(item);
+        }
+        else{
+            return generateCartItem();
+        }
+    }
     return (
         <div className='home-container'>
             <div className="products-container">
@@ -27,7 +37,7 @@ const Home = () => {
                 }
             </div>
             <div className="cart-container">
-                <Cart cart={cart}></Cart>
+                <Cart cart={cart} generateCartItem={generateCartItem} generatedItem={generatedItem}></Cart>
             </div>
         </div>
     );
